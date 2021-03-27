@@ -312,7 +312,7 @@ const Dolphin: AvatarItem[] = [
   },
   {
     name: "Simplecast",
-    url: require("./simplecast/podcasts/black.png"),
+    url: require("./simplecast/tshirt/black.png"),
     items: [
       {
         name: "None",
@@ -322,6 +322,51 @@ const Dolphin: AvatarItem[] = [
           {
             color: "rgba(0,0,0,0)",
             url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "T-Shirt",
+        y: 687,
+        x: 116,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./simplecast/tshirt/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./simplecast/tshirt/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./simplecast/tshirt/grey.png"),
+          },
+          {
+            color: "#fff",
+            url: require("./simplecast/tshirt/white.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./simplecast/tshirt/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./simplecast/tshirt/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./simplecast/tshirt/purple.png"),
+          },
+
+          {
+            color: "#7d0000",
+            url: require("./simplecast/tshirt/red.png"),
+          },
+
+          {
+            color: "#cdc651",
+            url: require("./simplecast/tshirt/yellow.png"),
           },
         ],
       },
