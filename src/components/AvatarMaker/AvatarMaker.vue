@@ -139,21 +139,32 @@ export default defineComponent({
       this.color = `rgba(${r}, ${g}, ${b}, ${a})`;
       this.drawImage();
     },
-    drawImage() {
+    async drawImage() {
       if (this.canvas) {
-        this.canvas.fillStyle = this.color;
-        this.canvas.fillRect(0, 0, this.width, this.height);
         const canvas = this.canvas;
-        this.avatar.forEach((option) => {
-          const image = new Image();
-          image.addEventListener(
-            "load",
-            () => {
-              canvas.drawImage(image, option.variant.x, option.variant.y);
-            },
-            false
+        canvas.fillStyle = this.color;
+        canvas.fillRect(0, 0, this.width, this.height);
+        let promiseImages: Promise<void>[] = [];
+        let images: {
+          image: HTMLImageElement;
+          variant: AvatarSelection["variant"];
+        }[] = [];
+        for (const option of this.avatar) {
+          promiseImages.push(
+            new Promise((resolve) => {
+              const image = new Image();
+              image.onload = function () {
+                resolve();
+              };
+              image.src = option.variant.url;
+              images.push({ image: image, variant: option.variant });
+            })
           );
-          image.src = option.variant.url;
+        }
+        await Promise.all(promiseImages).then(() => {
+          images.forEach((item) => {
+            canvas.drawImage(item.image, item.variant.x, item.variant.y);
+          });
         });
       }
     },

@@ -2,6 +2,116 @@ import { AvatarItem } from "@/components/AvatarMaker/AvatarMaker.types";
 
 const Dolphin: AvatarItem[] = [
   {
+    name: "Background",
+    url: require("./background/rounded-square/blue.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Rounded Square",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,.5)",
+            url: require("./background/rounded-square/transparent-black.png"),
+          },
+          {
+            color: "rgba(255,255,255,.5)",
+            url: require("./background/rounded-square/transparent-white.png"),
+          },
+          {
+            color: "white",
+            url: require("./background/rounded-square/white.png"),
+          },
+          {
+            color: "#969eed",
+            url: require("./background/rounded-square/blue.png"),
+          },
+          {
+            color: "#ed96e0",
+            url: require("./background/rounded-square/pink.png"),
+          },
+          {
+            color: "#af4d4d",
+            url: require("./background/rounded-square/red.png"),
+          },
+          {
+            color: "#f2d76c",
+            url: require("./background/rounded-square/yellow.png"),
+          },
+        ],
+      },
+      {
+        name: "Rounded Square With Dots",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,.5)",
+            url: require("./background/rounded-square-dots/transparent-black.png"),
+          },
+          {
+            color: "rgba(255,255,255,.5)",
+            url: require("./background/rounded-square-dots/transparent-white.png"),
+          },
+          {
+            color: "white",
+            url: require("./background/rounded-square-dots/white.png"),
+          },
+          {
+            color: "#969eed",
+            url: require("./background/rounded-square-dots/blue.png"),
+          },
+          {
+            color: "#ed96e0",
+            url: require("./background/rounded-square-dots/pink.png"),
+          },
+          {
+            color: "#af4d4d",
+            url: require("./background/rounded-square-dots/red.png"),
+          },
+          {
+            color: "#f2d76c",
+            url: require("./background/rounded-square-dots/yellow.png"),
+          },
+        ],
+      },
+      {
+        name: "Circle",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color: "black",
+            url: require("./background/circle/black.png"),
+          },
+          {
+            color: "rgba(0,0,0,.5)",
+            url: require("./background/circle/transparent-black.png"),
+          },
+          {
+            color: "rgba(255,255,255,.5)",
+            url: require("./background/circle/transparent-white.png"),
+          },
+          {
+            color: "white",
+            url: require("./background/circle/white.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: "Base",
     url: require("./base/a.png"),
     items: [
@@ -97,9 +207,9 @@ const Dolphin: AvatarItem[] = [
         options: [
           {
             color: "rgba(0,0,0,0)",
-            url: require("./blank.png")
-          }
-        ]
+            url: require("./blank.png"),
+          },
+        ],
       },
       {
         name: "Default",
@@ -192,9 +302,9 @@ const Dolphin: AvatarItem[] = [
         options: [
           {
             color: "rgba(0,0,0,0)",
-            url: require("./blank.png")
-          }
-        ]
+            url: require("./blank.png"),
+          },
+        ],
       },
       {
         name: "Talk About Podcasts",

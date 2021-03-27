@@ -23,7 +23,7 @@ export interface AvatarSelection {
     url: string;
     x: number;
     y: number;
-  }
+  };
 }
 
 export interface RGBA {
