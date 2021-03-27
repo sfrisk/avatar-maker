@@ -1,4 +1,4 @@
-# dollmaker
+# Avatar Maker
 
 ## Project setup
 ```
