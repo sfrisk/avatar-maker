@@ -23,24 +23,26 @@
             Download Image
           </a>
         </div>
-        <div class="avatar-maker__tabs">
-          <button
-            v-for="option in options"
-            :key="option.name"
-            :title="option.name"
-            :class="{ active: option.name === tab.name }"
-            class="avatar-maker__tab"
-            @click="() => openTab(option)"
-          >
-            <img :src="option.url" :alt="option.name" />
-          </button>
-          <button
-            class="avatar-maker__tab"
-            :class="{ active: tab === 'background' }"
-            :style="{ background: color }"
-            title="Background"
-            @click="() => openTab('background')"
-          />
+        <div class="avatar-maker__tabs-wrap">
+          <div class="avatar-maker__tabs">
+            <button
+              v-for="option in options"
+              :key="option.name"
+              :title="option.name"
+              :class="{ active: option.name === tab.name }"
+              class="avatar-maker__tab"
+              @click="() => openTab(option)"
+            >
+              <img :src="option.url" :alt="option.name" />
+            </button>
+            <button
+              class="avatar-maker__tab"
+              :class="{ active: tab === 'background' }"
+              :style="{ background: color }"
+              title="Background"
+              @click="() => openTab('background')"
+            />
+          </div>
         </div>
         <div v-if="tab === 'background'" class="avatar-maker__section">
           <h2>Background</h2>
@@ -299,6 +301,8 @@ export default defineComponent({
       margin-left: 1rem;
       background: #bbbbbb;
       padding: 1rem;
+      max-width: 50%;
+      overflow-x: hidden;
     }
   }
   &__canvas {
@@ -328,7 +332,8 @@ export default defineComponent({
       height: 70px;
       border-radius: 4px;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
       text-decoration: none;
     }
   }
@@ -350,24 +355,29 @@ export default defineComponent({
       background: #17780f;
     }
   }
+  &__tabs-wrap {
+    max-width: 100%;
+    overflow-x: scroll;
+    background: #ddd;
+    padding: 1rem 0;
+  }
   &__tabs {
     display: flex;
-    overflow-x: scroll;
-    max-width: 100%;
     align-items: center;
     justify-content: flex-start;
-    background: #ddd;
-    padding: 0.5rem 0;
   }
   &__tab {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 70px;
+    min-width: 70px;
+    min-height: 70px;
     width: 70px;
     margin: 0 3px;
     background: #eee;
     border: 1px solid #ddd;
+    flex: 1;
     img {
       height: auto;
       width: auto;
