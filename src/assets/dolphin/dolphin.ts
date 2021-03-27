@@ -99,7 +99,7 @@ const Dolphin: AvatarItem[] = [
   },
   {
     name: "Headphones",
-    url: require("./headphones/airpod/airpod.png"),
+    url: require("./headphones/anime/pink.png"),
     items: [
       {
         name: "None",
@@ -118,8 +118,12 @@ const Dolphin: AvatarItem[] = [
         x: 249,
         options: [
           {
-            color: "white",
-            url: require("./headphones/airpod/airpod.png"),
+            color: "#f1f1f3",
+            url: require("./headphones/airpod/white.png"),
+          },
+          {
+            color: "#262626",
+            url: require("./headphones/airpod/black.png"),
           },
         ],
       },
