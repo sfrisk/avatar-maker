@@ -117,8 +117,8 @@ const Dolphin: AvatarItem[] = [
     items: [
       {
         name: "Default",
-        y: 140,
-        x: 86,
+        y: 236,
+        x: 134,
         options: [
           {
             color: "rgba(0,0,0,0)",
@@ -134,8 +134,8 @@ const Dolphin: AvatarItem[] = [
     items: [
       {
         name: "A",
-        x: 343,
-        y: 410,
+        x: 367,
+        y: 482,
         options: [
           {
             color: "#31302e",
@@ -165,8 +165,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "B",
-        x: 325,
-        y: 402,
+        x: 351,
+        y: 475,
         options: [
           {
             color: "#31302e",
@@ -213,8 +213,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Default",
-        y: 511,
-        x: 249,
+        y: 586,
+        x: 261,
         options: [
           {
             color: "#f1f1f3",
@@ -228,8 +228,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Anime",
-        y: 105,
-        x: 144,
+        y: 206,
+        x: 186,
         options: [
           {
             color: "#e60013",
@@ -255,8 +255,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Original",
-        y: 274,
-        x: 131,
+        y: 355,
+        x: 171,
         options: [
           {
             color: "#333333",
@@ -308,8 +308,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Talk About Podcasts",
-        y: 635,
-        x: 66,
+        y: 685,
+        x: 116,
         options: [
           {
             color: "#31302e",
@@ -349,8 +349,8 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Pod Squad",
-        y: 635,
-        x: 66,
+        y: 685,
+        x: 116,
         options: [
           {
             color: "#31302e",
@@ -387,9 +387,40 @@ const Dolphin: AvatarItem[] = [
         ],
       },
       {
+        name: "Simplecast",
+        y: 685,
+        x: 116,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./simplecast/simplecast/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./simplecast/simplecast/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./simplecast/simplecast/grey.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./simplecast/simplecast/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./simplecast/simplecast/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./simplecast/simplecast/purple.png"),
+          },
+        ],
+      },
+      {
         name: "Adswizz",
-        y: 635,
-        x: 66,
+        y: 685,
+        x: 116,
         options: [
           {
             color: "#31302e",
@@ -404,6 +435,10 @@ const Dolphin: AvatarItem[] = [
             url: require("./simplecast/adswizz/grey.png"),
           },
           {
+            color: "#edf3f7",
+            url: require("./simplecast/adswizz/white.png"),
+          },
+          {
             color: "#003567",
             url: require("./simplecast/adswizz/blue.png"),
           },
@@ -414,6 +449,163 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8957a1",
             url: require("./simplecast/adswizz/purple.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Hats",
+    url: require("./hats/beanie/white.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Beanie",
+        x: 160,
+        y: 160,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./hats/beanie/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./hats/beanie/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./hats/beanie/grey.png"),
+          },
+          {
+            color: "#edf3f7",
+            url: require("./hats/beanie/white.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/beanie/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./hats/beanie/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./hats/beanie/purple.png"),
+          },
+        ],
+      },
+      {
+        name: "Motorcycle Helmet",
+        x: 90,
+        y: 127,
+        options: [
+          {
+            color: "#141417",
+            url: require("./hats/motorcycle/black.png"),
+          },
+          {
+            color: "#213a53",
+            url: require("./hats/motorcycle/blue.png"),
+          },
+          {
+            color: "#263d2f",
+            url: require("./hats/motorcycle/green.png"),
+          },
+          {
+            color: "#593849",
+            url: require("./hats/motorcycle/purple.png"),
+          },
+          {
+            color: "#4e0c0c",
+            url: require("./hats/motorcycle/red.png"),
+          },
+          {
+            color: "#fff100",
+            url: require("./hats/motorcycle/yellow.png"),
+          },
+        ],
+      },
+      {
+        name: "Bike",
+        x: 48,
+        y: 94,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./hats/bike/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./hats/bike/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./hats/bike/grey.png"),
+          },
+          {
+            color: "#edf3f7",
+            url: require("./hats/bike/white.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/bike/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./hats/bike/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./hats/bike/purple.png"),
+          },
+          {
+            color: "#12527e",
+            url: require("./hats/bike/rubin.png"),
+          },
+        ],
+      },
+      {
+        name: "Sweatband",
+        x: 187,
+        y: 247,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./hats/sweatband/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./hats/sweatband/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./hats/sweatband/grey.png"),
+          },
+          {
+            color: "#edf3f7",
+            url: require("./hats/sweatband/white.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/sweatband/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./hats/sweatband/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./hats/sweatband/purple.png"),
           },
         ],
       },
