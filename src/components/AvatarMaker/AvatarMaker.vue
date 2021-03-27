@@ -49,7 +49,7 @@
         <div v-else class="avatar-maker__section">
           <h2>{{ tab.name }}</h2>
           <div
-            v-if="variants && variants.options.length > 0"
+            v-if="variants && variants.options.length > 1"
             class="avatar-maker__variants"
           >
             <h3>Colors</h3>
