@@ -308,7 +308,7 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Talk About Podcasts",
-        y: 685,
+        y: 687,
         x: 116,
         options: [
           {
@@ -349,7 +349,7 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Pod Squad",
-        y: 685,
+        y: 687,
         x: 116,
         options: [
           {
@@ -388,7 +388,7 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Simplecast",
-        y: 685,
+        y: 687,
         x: 116,
         options: [
           {
@@ -419,7 +419,7 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Adswizz",
-        y: 685,
+        y: 687,
         x: 116,
         options: [
           {
