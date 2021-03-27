@@ -23,17 +23,6 @@ const Dolphin: AvatarItem[] = [
     url: require("./eyes/A/black.png"),
     items: [
       {
-        name: "None",
-        x: 0,
-        y: 0,
-        options: [
-          {
-            color: "rgba(0,0,0,0)",
-            url: require("./blank.png")
-          }
-        ]
-      },
-      {
         name: "A",
         x: 343,
         y: 410,
