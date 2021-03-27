@@ -87,6 +87,25 @@ const Dolphin: AvatarItem[] = [
         ],
       },
       {
+        name: "Stripes",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,.5)",
+            url: require("./background/stripes/transparent-black.png"),
+          },
+          {
+            color: "rgba(255,255,255,.5)",
+            url: require("./background/stripes/transparent-white.png"),
+          },
+          {
+            color: "white",
+            url: require("./background/stripes/white.png"),
+          },
+        ],
+      },
+      {
         name: "Circle",
         y: 0,
         x: 0,
