@@ -293,7 +293,7 @@ const Dolphin: AvatarItem[] = [
   },
   {
     name: "Simplecast",
-    url: require("./simplecast/podcasts/pink.png"),
+    url: require("./simplecast/podcasts/black.png"),
     items: [
       {
         name: "None",
@@ -383,6 +383,37 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#cdc651",
             url: require("./simplecast/podsquad/yellow.png"),
+          },
+        ],
+      },
+      {
+        name: "Adswizz",
+        y: 635,
+        x: 66,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./simplecast/adswizz/black.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./simplecast/adswizz/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./simplecast/adswizz/grey.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./simplecast/adswizz/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./simplecast/adswizz/pink.png"),
+          },
+          {
+            color: "#8957a1",
+            url: require("./simplecast/adswizz/purple.png"),
           },
         ],
       },
