@@ -519,6 +519,109 @@ const Dolphin: AvatarItem[] = [
     ],
   },
   {
+    name: "Jackets",
+    url: require("./jacket/leather/black.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Leather Jacket",
+        y: 681,
+        x: 106,
+        options: [
+          {
+            color: "#141417",
+            url: require("./jacket/leather/black.png"),
+          },
+          {
+            color: "#262626",
+            url: require("./jacket/leather/grey.png"),
+          },
+          {
+            color: "#213a53",
+            url: require("./jacket/leather/blue.png"),
+          },
+          {
+            color: "#263d2f",
+            url: require("./jacket/leather/green.png"),
+          },
+          {
+            color: "#593849",
+            url: require("./jacket/leather/purple.png"),
+          },
+          {
+            color: "#4e0c0c",
+            url: require("./jacket/leather/red.png"),
+          },
+          {
+            color: "#4e0c0d",
+            url: require("./jacket/leather/red-2.png"),
+          },
+          {
+            color: "#4e0c0b",
+            url: require("./jacket/leather/red-3.png"),
+          },
+          {
+            color: "#fff100",
+            url: require("./jacket/leather/yellow.png"),
+          },
+        ],
+      },
+      {
+        name: "Leather Jacket (Simplecast)",
+        y: 681,
+        x: 106,
+        options: [
+          {
+            color: "#141417",
+            url: require("./jacket/leather-simplecast/black.png"),
+          },
+          {
+            color: "#262626",
+            url: require("./jacket/leather-simplecast/grey.png"),
+          },
+          {
+            color: "#213a53",
+            url: require("./jacket/leather-simplecast/blue.png"),
+          },
+          {
+            color: "#263d2f",
+            url: require("./jacket/leather-simplecast/green.png"),
+          },
+          {
+            color: "#593849",
+            url: require("./jacket/leather-simplecast/purple.png"),
+          },
+          {
+            color: "#4e0c0c",
+            url: require("./jacket/leather-simplecast/red.png"),
+          },
+          {
+            color: "#4e0c0d",
+            url: require("./jacket/leather-simplecast/red-2.png"),
+          },
+          {
+            color: "#4e0c0b",
+            url: require("./jacket/leather-simplecast/red-3.png"),
+          },
+          {
+            color: "#fff100",
+            url: require("./jacket/leather-simplecast/yellow.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: "Hats",
     url: require("./hats/beanie/black.png"),
     items: [
@@ -670,6 +773,75 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8957a1",
             url: require("./hats/sweatband/purple.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Accessory Left",
+    url: require("./accessories-left/diet-coke/diet-coke.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Diet Coke",
+        y: 1014,
+        x: 195,
+        options: [
+          {
+            color: "red",
+            url: require("./accessories-left/diet-coke/diet-coke.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Accessory Right",
+    url: require("./accessories-right/mic/black.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Mic",
+        y: 638,
+        x: 911,
+        options: [
+          {
+            color: "#333132",
+            url: require("./accessories-right/mic/black.png"),
+          },
+          {
+            color: "#ebebed",
+            url: require("./accessories-right/mic/white.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./accessories-right/mic/blue.png"),
+          },
+
+          {
+            color: "#8b2578",
+            url: require("./accessories-right/mic/adswizz.png"),
           },
         ],
       },
