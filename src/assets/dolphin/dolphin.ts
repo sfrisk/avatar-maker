@@ -102,6 +102,17 @@ const Dolphin: AvatarItem[] = [
     url: require("./headphones/airpod/airpod.png"),
     items: [
       {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png")
+          }
+        ]
+      },
+      {
         name: "Default",
         y: 511,
         x: 249,
@@ -136,7 +147,43 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#1a1a1a",
             url: require("./headphones/anime/black.png"),
-          }
+          },
+        ],
+      },
+      {
+        name: "Original",
+        y: 274,
+        x: 131,
+        options: [
+          {
+            color: "#333333",
+            url: require("./headphones/original/black.png"),
+          },
+          {
+            color: "#1075a3",
+            url: require("./headphones/original/blue.png"),
+          },
+          {
+            color: "#073028",
+            url: require("./headphones/original/dark-green.png"),
+          },
+          {
+            color: "#7ea76a",
+            url: require("./headphones/original/lime-green.png"),
+          },
+          {
+            color: "#f594bf",
+            url: require("./headphones/original/pink.png"),
+          },
+          {
+            color: "#664397",
+            url: require("./headphones/original/purple.png"),
+          },
+
+          {
+            color: "#971921",
+            url: require("./headphones/original/red.png"),
+          },
         ],
       },
     ],
