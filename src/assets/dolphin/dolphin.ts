@@ -475,7 +475,7 @@ const Dolphin: AvatarItem[] = [
   },
   {
     name: "Hats",
-    url: require("./hats/beanie/white.png"),
+    url: require("./hats/beanie/black.png"),
     items: [
       {
         name: "None",
@@ -490,7 +490,7 @@ const Dolphin: AvatarItem[] = [
       },
       {
         name: "Beanie",
-        x: 160,
+        x: 155,
         y: 160,
         options: [
           {
