@@ -97,6 +97,50 @@ const Dolphin: AvatarItem[] = [
       },
     ],
   },
+  {
+    name: "Headphones",
+    url: require("./headphones/airpod/airpod.png"),
+    items: [
+      {
+        name: "Default",
+        y: 511,
+        x: 249,
+        options: [
+          {
+            color: "white",
+            url: require("./headphones/airpod/airpod.png"),
+          },
+        ],
+      },
+      {
+        name: "Anime",
+        y: 105,
+        x: 144,
+        options: [
+          {
+            color: "#e60013",
+            url: require("./headphones/anime/red.png"),
+          },
+          {
+            color: "#5d3971",
+            url: require("./headphones/anime/purple.png"),
+          },
+          {
+            color: "#009944",
+            url: require("./headphones/anime/green.png"),
+          },
+          {
+            color: "#b74986",
+            url: require("./headphones/anime/pink.png"),
+          },
+          {
+            color: "#1a1a1a",
+            url: require("./headphones/anime/black.png"),
+          }
+        ],
+      },
+    ],
+  },
 ];
 
 export default Dolphin;
