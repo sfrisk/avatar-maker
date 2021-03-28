@@ -619,6 +619,49 @@ const Dolphin: AvatarItem[] = [
           },
         ],
       },
+      {
+        name: "Hoodie",
+        y: 618,
+        x: 48,
+        options: [
+          {
+            color: "#141417",
+            url: require("./jacket/hoodie/black.png"),
+          },
+          {
+            color: "#262626",
+            url: require("./jacket/hoodie/grey.png"),
+          },
+          {
+            color: "#ebebed",
+            url: require("./jacket/hoodie/white.png"),
+          },
+          {
+            color: "#bdced8",
+            url: require("./jacket/hoodie/white-2.png"),
+          },
+          {
+            color: "#213a53",
+            url: require("./jacket/hoodie/blue.png"),
+          },
+          {
+            color: "#263d2f",
+            url: require("./jacket/hoodie/green.png"),
+          },
+          {
+            color: "#593849",
+            url: require("./jacket/hoodie/purple.png"),
+          },
+          {
+            color: "#4e0c0c",
+            url: require("./jacket/hoodie/red.png"),
+          },
+          {
+            color: "#fff100",
+            url: require("./jacket/hoodie/yellow.png"),
+          },
+        ],
+      },
     ],
   },
   {
@@ -804,6 +847,32 @@ const Dolphin: AvatarItem[] = [
           },
         ],
       },
+      {
+        name: "Yo-Yo",
+        y: 640,
+        x: 32,
+        options: [
+          {
+            color: "#003d5a",
+            url: require("./accessories-left/yoyo/blue.png"),
+          },
+          {
+            color: "#971921",
+            url: require("./accessories-left/yoyo/red.png"),
+          },
+        ],
+      },
+      {
+        name: "Coach",
+        y: 795,
+        x: 24,
+        options: [
+          {
+            color: "#b08e78",
+            url: require("./accessories-left/pets/coach.png"),
+          },
+        ],
+      },
     ],
   },
   {
@@ -842,6 +911,29 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8b2578",
             url: require("./accessories-right/mic/adswizz.png"),
+          },
+        ],
+      },
+      {
+        name: "Computer",
+        y: 830,
+        x: 696,
+        options: [
+          {
+            color: "#2f2f2e",
+            url: require("./accessories-right/computer/black.png"),
+          },
+          {
+            color: "#2f2f2f",
+            url: require("./accessories-right/computer/black-stickers.png"),
+          },
+          {
+            color: "#c3c2c2",
+            url: require("./accessories-right/computer/white.png"),
+          },
+          {
+            color: "#c3c2c1",
+            url: require("./accessories-right/computer/white-stickers.png"),
           },
         ],
       },
