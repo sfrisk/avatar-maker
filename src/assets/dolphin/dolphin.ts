@@ -1228,52 +1228,8 @@ const Dolphin: AvatarItem[] = [
             url: require("./hats/flat/white-2.png"),
           },
           {
-            color: "#003567",
+            color: "#643f14",
             url: require("./hats/flat/brown.png"),
-          },
-          {
-            color: "#003567",
-            url: require("./hats/flat/blue.png"),
-          },
-          {
-            color: "#ea68a2",
-            url: require("./hats/flat/pink.png"),
-          },
-          {
-            color: "#005982",
-            url: require("./hats/flat/teal.png"),
-          },
-        ],
-      },
-      {
-        name: "Flat",
-        y: 176,
-        x: 219,
-        options: [
-
-          {
-            color: "#2f2f2f",
-            url: require("./hats/flat/black.png"),
-          },
-          {
-            color: "#34343a",
-            url: require("./hats/flat/black-2.png"),
-          },
-          {
-            color: "#414141",
-            url: require("./hats/flat/dark-grey.png"),
-          },
-          {
-            color: "#676767",
-            url: require("./hats/flat/grey.png"),
-          },
-          {
-            color: "#ebebed",
-            url: require("./hats/flat/white.png"),
-          },
-          {
-            color: "#bbb9c9",
-            url: require("./hats/flat/white-2.png"),
           },
           {
             color: "#003567",
