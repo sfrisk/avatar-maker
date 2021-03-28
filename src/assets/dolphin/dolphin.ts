@@ -155,6 +155,72 @@ const Dolphin: AvatarItem[] = [
           },
         ],
       },
+      {
+        name: "Pride",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color:
+              "linear-gradient(180deg, #FE0001 16.66%, #FD8C00 16.66%, 33.32%, #FFE500 33.32%, 49.98%, #119F0B 49.98%, 66.64%, #0644B3 66.64%, 83.3%, #C22EDC 83.3%)",
+            url: require("./background/pride/pride.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #FE0000 16.66%, #FD8C00 16.66%, 33.32%, #FFE500 33.32%, 49.98%, #119F0B 49.98%, 66.64%, #0644B3 66.64%, 83.3%, #C22EDC 83.3%)",
+            url: require("./background/pride/modern-pride.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #181818 25%, #A3A3A3 25%, 50%, #FFFFFF 50%, 75%, #800080 75%)",
+            url: require("./background/pride/ace.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #181818 14.285%, #C3C3C3 14.285%, 28.57%, #FFFFFF 28.57%, 42.855%, #B8F483 42.855%, 57.14%, #FFFFFF 57.14%, 71.425%, #C3C3C3 71.425%, 85.71%, #181818 85.71%)",
+            url: require("./background/pride/agender.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #D60270 40%, #9B4F96 40%, 60%, #0038A8 60%)",
+            url: require("./background/pride/bisexual.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #FF77A3 20%, #FFFFFF 20%, 40%, #BE18D6 40%, 60%, #181818 60%, 80%, #333EBD 80%)",
+            url: require("./background/pride/fluid.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #B57EDC 33.33%, #FFFFFF 33.33%, 66.66%, #4A8123 66.66%)",
+            url: require("./background/pride/gender-queer.png"),
+          },
+          {
+            color: "#ffd800",
+            url: require("./background/pride/intersect.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #8C1D00 14.285%, #C74D52 14.285%, 28.57%, #E5ABD0 28.57%, 42.855%, #EDEDEB 42.855%, 57.14%, #D260A7 57.14%, 71.425%, #B95393 71.425%, 85.71%, #A60061 85.71%)",
+            url: require("./background/pride/lesbian.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #FFF430 25%, #FFFFFF 25%, 50%, #9C59D1 50%, 75%, #181818 75%)",
+            url: require("./background/pride/nb.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #FF218C 33.33%, #FFD800 33.33%, 66.66%, #21B1FF 66.66%)",
+            url: require("./background/pride/pan.png"),
+          },
+          {
+            color:
+              "linear-gradient(180deg, #5BCEFA 20%, #F5A9B8 20%, 40%, #FFFFFF 40%, 60%, #F5A9B8 60%, 80%, #5BCEFA 80%)",
+            url: require("./background/pride/trans.png"),
+          },
+        ],
+      },
     ],
   },
   {
@@ -223,7 +289,7 @@ const Dolphin: AvatarItem[] = [
             url: require("./eyes/B/blue.png"),
           },
           {
-            color: "#3e2f27",
+            color: "#5a4219",
             url: require("./eyes/B/brown.png"),
           },
           {
@@ -237,6 +303,193 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#7d0000",
             url: require("./eyes/B/red.png"),
+          },
+        ],
+      },
+      {
+        name: "B-2",
+        x: 328,
+        y: 475,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./eyes/B-2/black.png"),
+          },
+          {
+            color: "#295569",
+            url: require("./eyes/B-2/blue.png"),
+          },
+          {
+            color: "#5a4219",
+            url: require("./eyes/B-2/brown.png"),
+          },
+          {
+            color: "#2f673b",
+            url: require("./eyes/B-2/green.png"),
+          },
+          {
+            color: "#55214f",
+            url: require("./eyes/B-2/purple.png"),
+          },
+          {
+            color: "#7d0000",
+            url: require("./eyes/B-2/red.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Face 1",
+    url: require("./face/blush/purple.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Blush-1",
+        y: 565,
+        x: 435,
+        options: [
+          {
+            color: "#783370",
+            url: require("./face/blush/purple.png"),
+          },
+          {
+            color: "#719bbd",
+            url: require("./face/blush/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/blush/pink.png"),
+          },
+        ],
+      },
+      {
+        name: "Blush-2",
+        y: 570,
+        x: 430,
+        options: [
+          {
+            color: "#783370",
+            url: require("./face/blush-2/purple.png"),
+          },
+          {
+            color: "#719bbd",
+            url: require("./face/blush-2/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/blush-2/pink.png"),
+          },
+        ],
+      },
+      {
+        name: "Bandaid",
+        y: 308,
+        x: 778,
+        options: [
+          {
+            color: "#569874",
+            url: require("./face/bandaid/green.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/bandaid/pink.png"),
+          },
+          {
+            color: "#9790b1",
+            url: require("./face/bandaid/purple.png"),
+          },
+          {
+            color: "#fad6ad",
+            url: require("./face/bandaid/peach.png"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Face 2",
+    url: require("./face/blush/purple.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Blush-1",
+        y: 565,
+        x: 435,
+        options: [
+          {
+            color: "#783370",
+            url: require("./face/blush/purple.png"),
+          },
+          {
+            color: "#719bbd",
+            url: require("./face/blush/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/blush/pink.png"),
+          },
+        ],
+      },
+      {
+        name: "Blush-2",
+        y: 570,
+        x: 430,
+        options: [
+          {
+            color: "#783370",
+            url: require("./face/blush-2/purple.png"),
+          },
+          {
+            color: "#719bbd",
+            url: require("./face/blush-2/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/blush-2/pink.png"),
+          },
+        ],
+      },
+      {
+        name: "Bandaid",
+        y: 308,
+        x: 778,
+        options: [
+          {
+            color: "#569874",
+            url: require("./face/bandaid/green.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./face/bandaid/pink.png"),
+          },
+          {
+            color: "#9790b1",
+            url: require("./face/bandaid/purple.png"),
+          },
+          {
+            color: "#fad6ad",
+            url: require("./face/bandaid/peach.png"),
           },
         ],
       },
@@ -395,6 +648,10 @@ const Dolphin: AvatarItem[] = [
             color: "#cdc651",
             url: require("./simplecast/tshirt/yellow.png"),
           },
+          {
+            color: "#393134",
+            url: require("./simplecast/tshirt/black-2.png"),
+          },
         ],
       },
       {
@@ -436,6 +693,11 @@ const Dolphin: AvatarItem[] = [
             color: "#cdc651",
             url: require("./simplecast/podcasts/yellow.png"),
           },
+
+          {
+            color: "#393134",
+            url: require("./simplecast/podcasts/black-2.png"),
+          },
         ],
       },
       {
@@ -475,6 +737,11 @@ const Dolphin: AvatarItem[] = [
             color: "#cdc651",
             url: require("./simplecast/podsquad/yellow.png"),
           },
+
+          {
+            color: "#393134",
+            url: require("./simplecast/podsquad/black-2.png"),
+          },
         ],
       },
       {
@@ -505,6 +772,11 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8957a1",
             url: require("./simplecast/simplecast/purple.png"),
+          },
+
+          {
+            color: "#393134",
+            url: require("./simplecast/simplecast/black-2.png"),
           },
         ],
       },
@@ -540,6 +812,10 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8957a1",
             url: require("./simplecast/adswizz/purple.png"),
+          },
+          {
+            color: "#393134",
+            url: require("./simplecast/adswizz/black-2.png"),
           },
         ],
       },
@@ -690,6 +966,54 @@ const Dolphin: AvatarItem[] = [
         ],
       },
     ],
+  },
+  {
+    name: "Glasses",
+    url: require("./glasses/monocle/black.png"),
+    items: [
+      {
+        name: "None",
+        x: 0,
+        y: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,0)",
+            url: require("./blank.png"),
+          },
+        ],
+      },
+      {
+        name: "Monocle",
+        x: 148,
+        y: 415,
+        options: [
+          {
+            color: "#31302e",
+            url: require("./glasses/monocle/black.png"),
+          },
+          {
+            color: "#edf3f7",
+            url: require("./glasses/monocle/white.png"),
+          },
+          {
+            color: "#4e0c0c",
+            url: require("./glasses/monocle/red.png"),
+          },
+          {
+            color: "#593849",
+            url: require("./glasses/monocle/purple.png"),
+          },
+          {
+            color: "#213a53",
+            url: require("./glasses/monocle/blue.png"),
+          },
+          {
+            color: "#263d2f",
+            url: require("./glasses/monocle/green.png"),
+          },
+        ],
+      },
+    ]
   },
   {
     name: "Hats",
@@ -843,6 +1167,125 @@ const Dolphin: AvatarItem[] = [
           {
             color: "#8957a1",
             url: require("./hats/sweatband/purple.png"),
+          },
+        ],
+      },
+      {
+        name: "Boater",
+        y: 116,
+        x: 178,
+        options: [
+          {
+            color: "#2a2729",
+            url: require("./hats/boater/black.png"),
+          },
+          {
+            color: "#343138",
+            url: require("./hats/boater/dark-grey.png"),
+          },
+          {
+            color: "#e7eaf2",
+            url: require("./hats/boater/white.png"),
+          },
+          {
+            color: "#aaa8bb",
+            url: require("./hats/boater/white-2.png"),
+          },
+          {
+            color: "#295569",
+            url: require("./hats/boater/teal.png"),
+          },
+        ]
+      },
+      {
+        name: "Flat",
+        y: 176,
+        x: 219,
+        options: [
+
+          {
+            color: "#2f2f2f",
+            url: require("./hats/flat/black.png"),
+          },
+          {
+            color: "#34343a",
+            url: require("./hats/flat/black-2.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./hats/flat/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./hats/flat/grey.png"),
+          },
+          {
+            color: "#ebebed",
+            url: require("./hats/flat/white.png"),
+          },
+          {
+            color: "#bbb9c9",
+            url: require("./hats/flat/white-2.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/flat/brown.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/flat/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./hats/flat/pink.png"),
+          },
+          {
+            color: "#005982",
+            url: require("./hats/flat/teal.png"),
+          },
+        ],
+      },
+      {
+        name: "Flat",
+        y: 176,
+        x: 219,
+        options: [
+
+          {
+            color: "#2f2f2f",
+            url: require("./hats/flat/black.png"),
+          },
+          {
+            color: "#34343a",
+            url: require("./hats/flat/black-2.png"),
+          },
+          {
+            color: "#414141",
+            url: require("./hats/flat/dark-grey.png"),
+          },
+          {
+            color: "#676767",
+            url: require("./hats/flat/grey.png"),
+          },
+          {
+            color: "#ebebed",
+            url: require("./hats/flat/white.png"),
+          },
+          {
+            color: "#bbb9c9",
+            url: require("./hats/flat/white-2.png"),
+          },
+          {
+            color: "#003567",
+            url: require("./hats/flat/blue.png"),
+          },
+          {
+            color: "#ea68a2",
+            url: require("./hats/flat/pink.png"),
+          },
+          {
+            color: "#005982",
+            url: require("./hats/flat/teal.png"),
           },
         ],
       },
