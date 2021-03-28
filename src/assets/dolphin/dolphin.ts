@@ -2,7 +2,7 @@ import { AvatarItem } from "@/components/AvatarMaker/AvatarMaker.types";
 
 const Dolphin: AvatarItem[] = [
   {
-    name: "Background",
+    name: "Background Patterns",
     url: require("./background/rounded-square/blue.png"),
     items: [
       {
@@ -245,7 +245,7 @@ const Dolphin: AvatarItem[] = [
     url: require("./eyes/A/black.png"),
     items: [
       {
-        name: "A",
+        name: "Plain",
         x: 367,
         y: 482,
         options: [
@@ -276,7 +276,7 @@ const Dolphin: AvatarItem[] = [
         ],
       },
       {
-        name: "B",
+        name: "Anime",
         x: 351,
         y: 475,
         options: [
@@ -307,7 +307,7 @@ const Dolphin: AvatarItem[] = [
         ],
       },
       {
-        name: "B-2",
+        name: "Anime with Lashes",
         x: 328,
         y: 475,
         options: [
@@ -591,7 +591,7 @@ const Dolphin: AvatarItem[] = [
     ],
   },
   {
-    name: "Simplecast",
+    name: "Shirts",
     url: require("./simplecast/tshirt/black.png"),
     items: [
       {
@@ -1013,7 +1013,7 @@ const Dolphin: AvatarItem[] = [
           },
         ],
       },
-    ]
+    ],
   },
   {
     name: "Hats",
@@ -1195,14 +1195,13 @@ const Dolphin: AvatarItem[] = [
             color: "#295569",
             url: require("./hats/boater/teal.png"),
           },
-        ]
+        ],
       },
       {
         name: "Flat",
         y: 176,
         x: 219,
         options: [
-
           {
             color: "#2f2f2f",
             url: require("./hats/flat/black.png"),

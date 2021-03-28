@@ -2,12 +2,10 @@
   <div class="avatar-maker">
     <h1>{{ title }}</h1>
     <div class="avatar-maker__content">
-      <canvas
-        class="avatar-maker__canvas"
-        :height="height"
-        :width="width"
-        ref="canvas"
-      />
+      <div class="avatar-maker__canvas">
+        <canvas :height="height" :width="width" ref="canvas" />
+        <p class="align-right"><em>Enjoy! &lt;3</em></p>
+      </div>
       <div class="avatar-maker__customize">
         <div class="avatar-maker__actions">
           <button class="avatar-maker__random" @click="randomize">
@@ -23,23 +21,25 @@
             Download Image
           </a>
         </div>
-        <div class="avatar-maker__tabs-wrap">
-          <div class="avatar-maker__tabs">
+        <div class="avatar-maker__section">
+          <div class="avatar-maker__options">
             <button
               v-for="option in options"
               :key="option.name"
-              :title="option.name"
+              :title="`${option.name} ${
+                option.name === tab.name ? '(Selected)' : ''
+              }`"
               :class="{ active: option.name === tab.name }"
-              class="avatar-maker__tab"
+              class="avatar-maker__option"
               @click="() => openTab(option)"
             >
               <img :src="option.url" :alt="option.name" />
             </button>
             <button
-              class="avatar-maker__tab"
+              class="avatar-maker__option"
               :class="{ active: tab === 'background' }"
               :style="{ background: color }"
-              title="Background"
+              :title="`Background ${tab === 'background' ? '(Selected)' : ''}`"
               @click="() => openTab('background')"
             />
           </div>
@@ -50,31 +50,40 @@
         </div>
         <div v-else class="avatar-maker__section">
           <h2>{{ tab.name }}</h2>
-          <div
-            v-if="variants && variants.options.length > 1"
-            class="avatar-maker__variants"
-          >
-            <h3>Colors</h3>
-            <button
-              v-for="v in variants.options"
-              :key="v.color"
-              :style="{ background: v.color }"
-              :class="{ active: v.color === variant.color }"
-              class="avatar-maker__variant"
-              @click="() => setVariant(v)"
-            />
-          </div>
           <div v-if="variants" class="avatar-maker__options">
             <button
               v-for="item in tab.items"
               :key="item.name"
-              :title="`${tab.name} ${item.name}`"
+              :title="`${tab.name} ${item.name}  ${
+                variants.name === item.name ? '(Selected)' : ''
+              }`"
               :class="{ active: variants.name === item.name }"
               class="avatar-maker__option"
               @click="setItem(item)"
             >
               <img :src="item.options[0].url" />
             </button>
+          </div>
+        </div>
+        <div v-if="variants.name !== 'None'" class="avatar-maker__section">
+          <div class="avatar-maker__variants">
+            <h2>{{ variants.name }} Options</h2>
+            <div v-if="variants.options.length > 1">
+              <button
+                v-for="(v, i) in variants.options"
+                :key="v.color"
+                :style="{ background: v.color }"
+                :title="`${variants.name} Option # ${i} ${
+                  v.color === variant.color ? '(Selected)' : ''
+                }`"
+                :class="{ active: v.color === variant.color }"
+                class="avatar-maker__variant"
+                @click="() => setVariant(v)"
+              />
+            </div>
+            <p v-if="variants.options.length === 1">
+              Alternative options not available.
+            </p>
           </div>
         </div>
       </div>
@@ -283,126 +292,125 @@ export default defineComponent({
   max-width: 500px;
   margin: 1rem auto;
   padding: 1rem;
-  background: white;
   @media (min-width: 768px) {
-    max-width: 1200px;
+    max-width: none;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1215px;
   }
   button {
     cursor: pointer;
   }
   &__content {
+    background: var(--primary001);
+    padding: 1rem;
     @media (min-width: 768px) {
       display: flex;
     }
+    @media (prefers-color-scheme: dark) {
+      background: var(--secondary002);
+    }
   }
   &__customize {
+    margin-top: 1rem;
     @media (min-width: 768px) {
+      margin-top: 0;
+      background: var(--primary003);
       flex: 1;
       margin-left: 1rem;
-      background: #bbbbbb;
       padding: 1rem;
       max-width: 50%;
       overflow-x: hidden;
+      @media (prefers-color-scheme: dark) {
+        background: var(--primary001);
+      }
     }
   }
   &__canvas {
-    object-fit: scale-down;
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    flex: 1;
+    border: 1rem solid white;
+    background: white;
+    @media (prefers-color-scheme: dark) {
+      border: 1rem solid var(--black);
+      background: var(--black);
+      color: var(--white);
+    }
     @media (min-width: 768px) {
-      max-width: 50%;
-      max-height: 50%;
-      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    canvas {
+      object-fit: scale-down;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      background: white;
     }
   }
   &__actions {
     display: flex;
-    padding: 1rem 0;
+    margin: 0 0 1rem;
     a,
     button {
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      text-align: center;
       flex: 1;
-      border: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 10px;
       height: 70px;
-      border-radius: 4px;
-      text-decoration: none;
       font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
     }
   }
   &__random {
-    background: #6f34cd;
-    color: white;
-    margin-right: 0.5rem;
+    background: var(--button__color);
+    color: var(--button__bg);
+    border: var(--button__bg);
     &:hover,
+    &:active,
     &:focus {
-      background: #622cb5;
+      opacity: 0.8;
     }
+    margin-right: 0.5rem;
   }
   &__save {
     margin-left: 0.5rem;
-    background: #1a8510;
-    color: white;
+    background: var(--button__bg);
+    color: var(--button__color);
+    border: var(--button__border);
     &:hover,
+    &:active,
     &:focus {
-      background: #17780f;
-    }
-  }
-  &__tabs-wrap {
-    max-width: 100%;
-    overflow-x: scroll;
-    background: #ddd;
-    padding: 1rem 0;
-  }
-  &__tabs {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  &__tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    min-width: 70px;
-    min-height: 70px;
-    width: 70px;
-    margin: 0 3px;
-    background: #eee;
-    border: 1px solid #ddd;
-    flex: 1;
-    img {
-      height: auto;
-      width: auto;
-      max-width: 50px;
-      max-height: 50px;
-    }
-    &.active {
-      border: 1px solid blue;
+      opacity: 0.8;
     }
   }
   &__section {
-    border-radius: 4px;
-    background: #ddd;
-    margin: 0.5rem 0;
+    background: var(--white);
+    @media (prefers-color-scheme: dark) {
+      background: var(--black);
+    }
+    margin: 1rem 0;
+    padding: 1rem 0.5rem 0;
     h2 {
       margin: 0;
-      padding: 0.5rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   &__options {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0.5rem 0;
+    max-width: 100%;
   }
   &__option {
     display: inline-flex;
@@ -410,26 +418,54 @@ export default defineComponent({
     justify-content: center;
     height: 70px;
     width: 70px;
-    margin: 0 3px;
-    background: #eee;
-    border: 2px solid #ddd;
+    margin: 0 0.5rem 1rem;
+    background: white;
+    border: 2px solid var(--primary001);
+    @media (prefers-color-scheme: dark) {
+      background: var(--secondary002);
+      border: 2px solid var(--secondary002);
+    }
+    &.active {
+      border: 2px solid var(--primary003);
+      @media (prefers-color-scheme: dark) {
+        border: 2px solid var(--white);
+      }
+    }
+    &:focus,
+    &:active {
+      border: 2px solid var(--primary002);
+      outline: none;
+      @media (prefers-color-scheme: dark) {
+        border: 2px solid var(--white);
+      }
+    }
+    &::-moz-focus-inner {
+      border: 0;
+    }
     img {
       height: auto;
       width: auto;
       max-width: 50px;
       max-height: 50px;
     }
-    &.active {
-      border: 2px solid blue;
-    }
   }
   &__variant {
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    border: 2px solid #ddd;
+    background: white;
+    margin: 0 0.5rem 1rem;
+    border: 2px solid var(--primary001);
     &.active {
-      border: 2px solid blue;
+      border: 2px solid var(--primary003);
+    }
+    &:focus,
+    &:active {
+      border: 2px solid var(--primary002);
+      outline: none;
+    }
+    &::-moz-focus-inner {
+      border: 0;
     }
   }
   .hu-color-picker {
