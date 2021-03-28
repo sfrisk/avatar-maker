@@ -128,6 +128,33 @@ const Dolphin: AvatarItem[] = [
           },
         ],
       },
+      {
+        name: "Bubbles",
+        y: 0,
+        x: 0,
+        options: [
+          {
+            color: "rgba(0,0,0,.5)",
+            url: require("./background/bubble/transparent-black.png"),
+          },
+          {
+            color: "rgba(255,255,255,.5)",
+            url: require("./background/bubble/transparent-white.png"),
+          },
+          {
+            color: "white",
+            url: require("./background/bubble/white.png"),
+          },
+          {
+            color: "rgba(180,249,255,.5)",
+            url: require("./background/bubble/transparent-blue.png"),
+          },
+          {
+            color: "rgba(31,54,56,.5)",
+            url: require("./background/bubble/transparent-dark-blue.png"),
+          },
+        ],
+      },
     ],
   },
   {
