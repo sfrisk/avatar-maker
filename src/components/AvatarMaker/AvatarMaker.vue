@@ -54,7 +54,7 @@
             <button
               v-for="item in tab.items"
               :key="item.name"
-              :title="`${tab.name} ${item.name}  ${
+              :title="`${tab.name} - ${item.name}  ${
                 variants.name === item.name ? '(Selected)' : ''
               }`"
               :class="{ active: variants.name === item.name }"
@@ -65,15 +65,18 @@
             </button>
           </div>
         </div>
-        <div v-if="variants.name !== 'None'" class="avatar-maker__section">
+        <div
+          v-if="variants && variants.name !== 'None'"
+          class="avatar-maker__section"
+        >
           <div class="avatar-maker__variants">
             <h2>{{ variants.name }} Options</h2>
             <div v-if="variants.options.length > 1">
               <button
-                v-for="(v, i) in variants.options"
-                :key="v.color"
+                v-for="v in variants.options"
+                :key="v.name"
                 :style="{ background: v.color }"
-                :title="`${variants.name} Option # ${i} ${
+                :title="`{{ variants.name }} ${v.name} ${
                   v.color === variant.color ? '(Selected)' : ''
                 }`"
                 :class="{ active: v.color === variant.color }"
@@ -182,17 +185,21 @@ export default defineComponent({
     randomize() {
       let avatar: AvatarSelection[] = [];
       this.options.forEach((section) => {
-        const option =
+        const variants =
           section.items[Math.floor(Math.random() * section.items.length)];
         const variant =
-          option.options[Math.floor(Math.random() * option.options.length)];
+          variants.options[Math.floor(Math.random() * variants.options.length)];
+        if (this.tab !== "background" && this.tab.name === section.name) {
+          this.variants = variants;
+          this.variant = variant;
+        }
         avatar.push({
           name: section.name,
           variant: {
-            name: option.name,
+            name: variants.name,
             url: variant.url,
-            x: option.x,
-            y: option.y,
+            x: variants.x,
+            y: variants.y,
           },
         });
       });
@@ -308,7 +315,7 @@ export default defineComponent({
       display: flex;
     }
     @media (prefers-color-scheme: dark) {
-      background: var(--secondary002);
+      background: rgba(0, 0, 0, 0.5);
     }
   }
   &__customize {
@@ -328,17 +335,16 @@ export default defineComponent({
   }
   &__canvas {
     flex: 1;
-    border: 1rem solid white;
-    background: white;
     @media (prefers-color-scheme: dark) {
-      border: 1rem solid var(--black);
-      background: var(--black);
       color: var(--white);
     }
     @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+    }
+    p {
+      padding: 1rem;
     }
     canvas {
       object-fit: scale-down;
@@ -348,6 +354,10 @@ export default defineComponent({
       width: auto;
       height: auto;
       background: white;
+      padding: 1rem;
+      @media (prefers-color-scheme: dark) {
+        background: var(--secondary002);
+      }
     }
   }
   &__actions {
@@ -371,7 +381,7 @@ export default defineComponent({
   &__random {
     background: var(--button__color);
     color: var(--button__bg);
-    border: var(--button__bg);
+    border: 4px solid var(--button__color);
     &:hover,
     &:active,
     &:focus {
@@ -383,7 +393,7 @@ export default defineComponent({
     margin-left: 0.5rem;
     background: var(--button__bg);
     color: var(--button__color);
-    border: var(--button__border);
+    border: 4px solid var(--button__border);
     &:hover,
     &:active,
     &:focus {
@@ -393,7 +403,7 @@ export default defineComponent({
   &__section {
     background: var(--white);
     @media (prefers-color-scheme: dark) {
-      background: var(--black);
+      background: rgba(0, 0, 0, 0.5);
     }
     margin: 1rem 0;
     padding: 1rem 0.5rem 0;
@@ -420,23 +430,23 @@ export default defineComponent({
     width: 70px;
     margin: 0 0.5rem 1rem;
     background: white;
-    border: 2px solid var(--primary001);
+    border: 4px solid white;
     @media (prefers-color-scheme: dark) {
       background: var(--secondary002);
-      border: 2px solid var(--secondary002);
+      border: 4px solid var(--secondary002);
     }
     &.active {
-      border: 2px solid var(--primary003);
+      border: 4px solid var(--secondary002);
       @media (prefers-color-scheme: dark) {
-        border: 2px solid var(--white);
+        border: 4px solid var(--white);
       }
     }
     &:focus,
     &:active {
-      border: 2px solid var(--primary002);
+      border: 4px solid var(--secondary001);
       outline: none;
       @media (prefers-color-scheme: dark) {
-        border: 2px solid var(--white);
+        border: 4px solid var(--primary003);
       }
     }
     &::-moz-focus-inner {
@@ -455,14 +465,25 @@ export default defineComponent({
     border-radius: 100%;
     background: white;
     margin: 0 0.5rem 1rem;
-    border: 2px solid var(--primary001);
+    background: white;
+    border: 4px solid white;
+    @media (prefers-color-scheme: dark) {
+      background: var(--secondary002);
+      border: 4px solid var(--secondary002);
+    }
     &.active {
-      border: 2px solid var(--primary003);
+      border: 4px solid var(--primary002);
+      @media (prefers-color-scheme: dark) {
+        border: 4px solid var(--white);
+      }
     }
     &:focus,
     &:active {
-      border: 2px solid var(--primary002);
+      border: 4px solid var(--secondary001);
       outline: none;
+      @media (prefers-color-scheme: dark) {
+        border: 4px solid var(--primary003);
+      }
     }
     &::-moz-focus-inner {
       border: 0;

@@ -1,6 +1,7 @@
 export interface CustomizableItemOptions {
   color: string;
   url: string;
+  name: string;
 }
 
 export interface CustomizableItem {
