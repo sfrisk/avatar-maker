@@ -194,7 +194,7 @@ const Dolphin: AvatarItem[] = [
             url: require("./background/pride/pride.png"),
           },
           {
-            name: "New LGBTQ",
+            name: "New LGBTQ+",
             color:
               "linear-gradient(180deg, #FE0000 16.66%, #FD8C00 16.66%, 33.32%, #FFE500 33.32%, 49.98%, #119F0B 49.98%, 66.64%, #0644B3 66.64%, 83.3%, #C22EDC 83.3%)",
             url: require("./background/pride/modern-pride.png"),

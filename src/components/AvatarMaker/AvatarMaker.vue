@@ -76,7 +76,7 @@
                 v-for="v in variants.options"
                 :key="v.name"
                 :style="{ background: v.color }"
-                :title="`{{ variants.name }} ${v.name} ${
+                :title="`${variants.name} ${v.name} ${
                   v.color === variant.color ? '(Selected)' : ''
                 }`"
                 :class="{ active: v.color === variant.color }"
