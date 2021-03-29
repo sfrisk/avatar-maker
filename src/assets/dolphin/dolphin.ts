@@ -488,7 +488,7 @@ const Dolphin: AvatarItem[] = [
   },
   {
     name: "Face 2",
-    url: require("./face/blush/purple.png"),
+    url: require("./face/blush-2/pink.png"),
     items: [
       {
         name: "None",
