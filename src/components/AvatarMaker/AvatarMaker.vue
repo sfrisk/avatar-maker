@@ -69,25 +69,27 @@
           v-if="variants && variants.name !== 'None'"
           class="avatar-maker__section"
         >
-          <div class="avatar-maker__variants">
-            <h2>{{ variants.name }} Options</h2>
-            <div v-if="variants.options.length > 1">
-              <button
-                v-for="v in variants.options"
-                :key="v.name"
-                :style="{ background: v.color }"
-                :title="`${variants.name} ${v.name} ${
-                  v.color === variant.color ? '(Selected)' : ''
-                }`"
-                :class="{ active: v.color === variant.color }"
-                class="avatar-maker__variant"
-                @click="() => setVariant(v)"
-              />
-            </div>
-            <p v-if="variants.options.length === 1">
-              Alternative options not available.
-            </p>
+          <h2>{{ variants.name }} Options</h2>
+
+          <div
+            class="avatar-maker__variants"
+            v-if="variants.options.length > 1"
+          >
+            <button
+              v-for="v in variants.options"
+              :key="v.name"
+              :style="{ background: v.color }"
+              :title="`${variants.name} ${v.name} ${
+                v.color === variant.color ? '(Selected)' : ''
+              }`"
+              :class="{ active: v.color === variant.color }"
+              class="avatar-maker__variant"
+              @click="() => setVariant(v)"
+            />
           </div>
+          <p v-if="variants.options.length === 1">
+            Alternative options not available.
+          </p>
         </div>
       </div>
     </div>
@@ -458,6 +460,13 @@ export default defineComponent({
       max-width: 50px;
       max-height: 50px;
     }
+  }
+  &__variants {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
   }
   &__variant {
     height: 50px;
