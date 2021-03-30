@@ -11,7 +11,7 @@ const Face1: AvatarItem = {
 };
 
 const Face2: AvatarItem = {
-  name: "Face 1",
+  name: "Face 2",
   url: require("./blush-2/pink.png"),
   items: [Blank, Bandaid, Blush, Blush2],
 };
