@@ -2,7 +2,7 @@ import { CustomizableItem } from "@/components/AvatarMaker/AvatarMaker.types";
 
 const Monocle: CustomizableItem = {
   name: "Monocle",
-  x: 148,
+  x: 155,
   y: 415,
   options: [
     {

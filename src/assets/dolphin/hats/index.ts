@@ -8,10 +8,16 @@ import Motorcycle from "./motorcycle";
 import Sweatband from "./sweatband";
 import Tiara from "./tiara";
 
-const Hats: AvatarItem = {
-  name: "Hats",
-  url: require("./beanie/black.png"),
-  items: [Blank, Beanie, Bike, Boater, Flat, Motorcycle, Sweatband, Tiara],
+const HatsLower: AvatarItem = {
+  name: "Hats Lower",
+  url: require("./tiara/moon.png"),
+  items: [Blank, Sweatband, Tiara],
 };
 
-export default Hats;
+const HatsUpper: AvatarItem = {
+  name: "Hats Upper",
+  url: require("./flat/black.png"),
+  items: [Blank, Beanie, Bike, Boater, Flat, Motorcycle],
+};
+
+export { HatsLower, HatsUpper };
