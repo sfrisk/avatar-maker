@@ -6,9 +6,7 @@ import Base from "./base";
 import Eyes from "./eyes";
 import { Face1, Face2 } from "./face";
 import FacialHair from "./facial-hair";
-import Glasses from "./glasses";
 import { HatsLower, HatsUpper } from "./hats";
-import Headphones from "./headphones";
 import Jackets from "./jacket";
 import Tops from "./top";
 
@@ -20,8 +18,6 @@ const Dolphin: AvatarItem[] = [
   Face1,
   Face2,
   HatsLower,
-  Glasses,
-  Headphones,
   Tops,
   Jackets,
   HatsUpper,
