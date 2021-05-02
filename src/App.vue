@@ -1,7 +1,7 @@
 <template>
   <div class="site">
     <a
-      href="https://your-url"
+      href="https://github.com/sfrisk/avatar-maker"
       class="github-corner"
       aria-label="View source on GitHub"
       ><svg
